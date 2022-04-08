@@ -49,7 +49,7 @@
             this.playersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(560, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(697, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -96,7 +96,7 @@
             this.dgvMatches.ReadOnly = true;
             this.dgvMatches.RowHeadersVisible = false;
             this.dgvMatches.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMatches.Size = new System.Drawing.Size(524, 150);
+            this.dgvMatches.Size = new System.Drawing.Size(670, 150);
             this.dgvMatches.TabIndex = 2;
             // 
             // btnAddNewMatch
@@ -111,7 +111,7 @@
             // 
             // btnEditSelectedMatch
             // 
-            this.btnEditSelectedMatch.Location = new System.Drawing.Point(212, 213);
+            this.btnEditSelectedMatch.Location = new System.Drawing.Point(285, 213);
             this.btnEditSelectedMatch.Name = "btnEditSelectedMatch";
             this.btnEditSelectedMatch.Size = new System.Drawing.Size(130, 23);
             this.btnEditSelectedMatch.TabIndex = 3;
@@ -120,7 +120,7 @@
             // 
             // btnDeleteSelectedMatch
             // 
-            this.btnDeleteSelectedMatch.Location = new System.Drawing.Point(409, 213);
+            this.btnDeleteSelectedMatch.Location = new System.Drawing.Point(555, 213);
             this.btnDeleteSelectedMatch.Name = "btnDeleteSelectedMatch";
             this.btnDeleteSelectedMatch.Size = new System.Drawing.Size(130, 23);
             this.btnDeleteSelectedMatch.TabIndex = 3;
@@ -131,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 251);
+            this.ClientSize = new System.Drawing.Size(697, 251);
             this.Controls.Add(this.btnDeleteSelectedMatch);
             this.Controls.Add(this.btnEditSelectedMatch);
             this.Controls.Add(this.btnAddNewMatch);

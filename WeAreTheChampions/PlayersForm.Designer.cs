@@ -55,12 +55,14 @@
             // 
             // cboTeams
             // 
+            this.cboTeams.DisplayMember = "Name";
             this.cboTeams.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTeams.FormattingEnabled = true;
             this.cboTeams.Location = new System.Drawing.Point(86, 89);
             this.cboTeams.Name = "cboTeams";
             this.cboTeams.Size = new System.Drawing.Size(121, 21);
             this.cboTeams.TabIndex = 2;
+            this.cboTeams.ValueMember = "TeamId";
             // 
             // label2
             // 
@@ -89,6 +91,8 @@
             this.lstPlayers.Name = "lstPlayers";
             this.lstPlayers.Size = new System.Drawing.Size(156, 204);
             this.lstPlayers.TabIndex = 4;
+            this.lstPlayers.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstPlayers_KeyDown);
+            this.lstPlayers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstPlayers_MouseDoubleClick);
             // 
             // btnCancel
             // 
@@ -99,6 +103,7 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // PlayersForm
             // 
