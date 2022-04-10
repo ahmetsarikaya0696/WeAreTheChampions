@@ -15,6 +15,8 @@ namespace WeAreTheChampions
         private AppDbContext db;
         private readonly Match selectedMatch;
 
+        public event EventHandler dbUpdated;
+
         public MatchForm(AppDbContext db, Match selectedMatch = null)
         {
             InitializeComponent();
@@ -33,10 +35,6 @@ namespace WeAreTheChampions
                     nudScore1.Value = (decimal)this.selectedMatch.Score1;
                     nudScore2.Value = (decimal)this.selectedMatch.Score2;
                     txtResult.Text = this.selectedMatch.Result.ToString();
-                }
-                else
-                {
-                    nudScore1.Visible = nudScore2.Visible = txtResult.Visible = false;
                 }
             }
         }
@@ -86,14 +84,19 @@ namespace WeAreTheChampions
                 if (cbAddScore.Checked)
                 {
                     selectedMatch.Score1 = (int)nudScore1.Value;
-                    selectedMatch.Score2 = (int)nudScore2.Value; 
+                    selectedMatch.Score2 = (int)nudScore2.Value;
+                    // Result ın tekrar hesaplanması gerekiyor
                 }
                 else
                 {
                     selectedMatch.Score1 = selectedMatch.Score2 = null;
+                    selectedMatch.Result = null;
                 }
             }
             db.SaveChanges();
+            if (dbUpdated != null)
+                dbUpdated(this, e);
+
         }
 
         private void cbAddScore_CheckedChanged(object sender, EventArgs e)

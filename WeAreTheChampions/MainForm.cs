@@ -47,6 +47,7 @@ namespace WeAreTheChampions
         private void btnAddNewMatch_Click(object sender, EventArgs e)
         {
             MatchForm matchForm = new MatchForm(db);
+            matchForm.dbUpdated += MatchForm_dbUpdated;
             matchForm.ShowDialog();
         }
 
@@ -56,13 +57,18 @@ namespace WeAreTheChampions
 
             var selectedMatch = (Match)dgvMatches.SelectedRows[0].DataBoundItem;
             MatchForm matchForm = new MatchForm(db, selectedMatch);
+            matchForm.dbUpdated += MatchForm_dbUpdated;
             matchForm.ShowDialog();
+        }
+
+        private void MatchForm_dbUpdated(object sender, EventArgs e)
+        {
+            ListMatches();
         }
 
         private void btnDeleteSelectedMatch_Click(object sender, EventArgs e)
         {
             DeleteSelectedMatch();
-
         }
 
         private void DeleteSelectedMatch()
@@ -82,7 +88,7 @@ namespace WeAreTheChampions
 
         private void dgvMatches_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Delete) 
+            if (e.KeyCode == Keys.Delete)
                 DeleteSelectedMatch();
         }
     }
