@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace WeAreTheChampions
 {
-    public partial class ColorsForm : Form
+    public partial class ColorForm : Form
     {
         private readonly AppDbContext db;
 
-        public ColorsForm(AppDbContext db)
+        public ColorForm(AppDbContext db)
         {
             InitializeComponent();
             this.db = db;

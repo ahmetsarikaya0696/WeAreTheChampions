@@ -56,25 +56,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewMatch.cs">
+    <Compile Include="MatchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewMatch.Designer.cs">
-      <DependentUpon>AddNewMatch.cs</DependentUpon>
+    <Compile Include="MatchForm.Designer.cs">
+      <DependentUpon>MatchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AppDbContext.cs" />
     <Compile Include="Color.cs" />
-    <Compile Include="ColorsForm.cs">
+    <Compile Include="ColorForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ColorsForm.Designer.cs">
-      <DependentUpon>ColorsForm.cs</DependentUpon>
+    <Compile Include="ColorForm.Designer.cs">
+      <DependentUpon>ColorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main Form.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main Form.Designer.cs">
-      <DependentUpon>Main Form.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Match.cs" />
     <Compile Include="Migrations\202204072148439_first.cs" />
@@ -99,14 +99,14 @@
     <Compile Include="TeamForm.Designer.cs">
       <DependentUpon>TeamForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddNewMatch.resx">
-      <DependentUpon>AddNewMatch.cs</DependentUpon>
+    <EmbeddedResource Include="MatchForm.resx">
+      <DependentUpon>MatchForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ColorsForm.resx">
-      <DependentUpon>ColorsForm.cs</DependentUpon>
+    <EmbeddedResource Include="ColorForm.resx">
+      <DependentUpon>ColorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main Form.resx">
-      <DependentUpon>Main Form.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204072148439_first.resx">
       <DependentUpon>202204072148439_first.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace WeAreTheChampions
 {
-    partial class AddNewMatch
+    partial class MatchForm
     {
         /// <summary>
         /// Required designer variable.
@@ -110,21 +110,25 @@
             // 
             // cboHomeTeam
             // 
+            this.cboHomeTeam.DisplayMember = "Name";
             this.cboHomeTeam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboHomeTeam.FormattingEnabled = true;
             this.cboHomeTeam.Location = new System.Drawing.Point(80, 30);
             this.cboHomeTeam.Name = "cboHomeTeam";
             this.cboHomeTeam.Size = new System.Drawing.Size(142, 21);
             this.cboHomeTeam.TabIndex = 3;
+            this.cboHomeTeam.ValueMember = "TeamId";
             // 
             // cboGuestTeam
             // 
+            this.cboGuestTeam.DisplayMember = "Name";
             this.cboGuestTeam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGuestTeam.FormattingEnabled = true;
             this.cboGuestTeam.Location = new System.Drawing.Point(80, 85);
             this.cboGuestTeam.Name = "cboGuestTeam";
             this.cboGuestTeam.Size = new System.Drawing.Size(142, 21);
             this.cboGuestTeam.TabIndex = 3;
+            this.cboGuestTeam.ValueMember = "TeamId";
             // 
             // nudScore1
             // 
@@ -158,7 +162,7 @@
             this.btnAddNewMatch.UseVisualStyleBackColor = true;
             this.btnAddNewMatch.Click += new System.EventHandler(this.btnAddNewMatch_Click);
             // 
-            // AddNewMatch
+            // MatchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -176,9 +180,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AddNewMatch";
+            this.Name = "MatchForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "AddNewMatch";
+            this.Text = "MatchForm";
             ((System.ComponentModel.ISupportInitialize)(this.nudScore1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudScore2)).EndInit();
             this.ResumeLayout(false);

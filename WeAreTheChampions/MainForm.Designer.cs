@@ -98,6 +98,7 @@
             this.dgvMatches.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMatches.Size = new System.Drawing.Size(670, 150);
             this.dgvMatches.TabIndex = 2;
+            this.dgvMatches.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvMatches_KeyDown);
             // 
             // btnAddNewMatch
             // 
@@ -117,6 +118,7 @@
             this.btnEditSelectedMatch.TabIndex = 3;
             this.btnEditSelectedMatch.Text = "Edit Selected Match";
             this.btnEditSelectedMatch.UseVisualStyleBackColor = true;
+            this.btnEditSelectedMatch.Click += new System.EventHandler(this.btnEditSelectedMatch_Click);
             // 
             // btnDeleteSelectedMatch
             // 
@@ -126,6 +128,7 @@
             this.btnDeleteSelectedMatch.TabIndex = 3;
             this.btnDeleteSelectedMatch.Text = "Delete Selected Match";
             this.btnDeleteSelectedMatch.UseVisualStyleBackColor = true;
+            this.btnDeleteSelectedMatch.Click += new System.EventHandler(this.btnDeleteSelectedMatch_Click);
             // 
             // MainForm
             // 

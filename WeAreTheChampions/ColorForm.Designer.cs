@@ -1,6 +1,6 @@
 ﻿namespace WeAreTheChampions
 {
-    partial class ColorsForm
+    partial class ColorForm
     {
         /// <summary>
         /// Required designer variable.
