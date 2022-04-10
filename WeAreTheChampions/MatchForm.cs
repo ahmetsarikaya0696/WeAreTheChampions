@@ -83,8 +83,15 @@ namespace WeAreTheChampions
                 selectedMatch.MatchTime = dtpMatchTime.Value;
                 selectedMatch.HomeTeamId = (int)cboHomeTeam.SelectedValue;
                 selectedMatch.GuestTeamId = (int)cboGuestTeam.SelectedValue;
-                selectedMatch.Score1 = (int)nudScore1.Value;
-                selectedMatch.Score2 = (int)nudScore2.Value;
+                if (cbAddScore.Checked)
+                {
+                    selectedMatch.Score1 = (int)nudScore1.Value;
+                    selectedMatch.Score2 = (int)nudScore2.Value; 
+                }
+                else
+                {
+                    selectedMatch.Score1 = selectedMatch.Score2 = null;
+                }
             }
             db.SaveChanges();
         }
