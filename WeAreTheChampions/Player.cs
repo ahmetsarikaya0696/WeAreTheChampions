@@ -19,8 +19,8 @@ namespace WeAreTheChampions
         public virtual Team Team { get; set; }
 
         public override string ToString()
-        {
-            return $"{Name} ({Team})";
+        { 
+            return Team != null ? $"{Name} ({Team})" : $"{Name} (Null)";
         }
     }
 }

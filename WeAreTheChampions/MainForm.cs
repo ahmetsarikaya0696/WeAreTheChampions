@@ -82,7 +82,8 @@ namespace WeAreTheChampions
 
         private void dgvMatches_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Delete) DeleteSelectedMatch();
+            if (e.KeyCode == Keys.Delete) 
+                DeleteSelectedMatch();
         }
     }
 }

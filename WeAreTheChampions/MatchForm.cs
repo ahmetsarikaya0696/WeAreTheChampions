@@ -23,13 +23,21 @@ namespace WeAreTheChampions
             ListMatchFormItems();
             if (this.selectedMatch != null)
             {
+                cbAddScore.Checked = selectedMatch.Score1 != null && selectedMatch.Score2 != null ? true : false;
                 dtpMatchTime.Value = this.selectedMatch.MatchTime;
                 cboHomeTeam.SelectedItem = this.selectedMatch.HomeTeam;
                 cboGuestTeam.SelectedItem = this.selectedMatch.GuestTeam;
-                nudScore1.Value = (decimal)this.selectedMatch.Score1;
-                nudScore2.Value = (decimal)this.selectedMatch.Score2;
-                txtResult.Text = this.selectedMatch.Result.ToString();
                 btnAddNewMatch.Text = "Edit Selected Match";
+                if (this.selectedMatch.Score1 != null || this.selectedMatch.Score2 != null)
+                {
+                    nudScore1.Value = (decimal)this.selectedMatch.Score1;
+                    nudScore2.Value = (decimal)this.selectedMatch.Score2;
+                    txtResult.Text = this.selectedMatch.Result.ToString();
+                }
+                else
+                {
+                    nudScore1.Visible = nudScore2.Visible = txtResult.Visible = false;
+                }
             }
         }
 
@@ -51,15 +59,24 @@ namespace WeAreTheChampions
 
             if (btnAddNewMatch.Text == "Add New Match")
             {
-                db.Matches.Add(new Match()
-                {
-                    MatchTime = dtpMatchTime.Value,
-                    HomeTeamId = (int)cboHomeTeam.SelectedValue,
-                    GuestTeamId = (int)cboGuestTeam.SelectedValue,
-                    Score1 = (int)nudScore1.Value,
-                    Score2 = (int)nudScore2.Value
-                }
-                   );
+                var newMatch = cbAddScore.Checked ?
+                    new Match()
+                    {
+                        MatchTime = dtpMatchTime.Value,
+                        HomeTeamId = (int)cboHomeTeam.SelectedValue,
+                        GuestTeamId = (int)cboGuestTeam.SelectedValue,
+                        Score1 = (int)nudScore1.Value,
+                        Score2 = (int)nudScore2.Value
+                    } :
+                    new Match()
+                    {
+                        MatchTime = dtpMatchTime.Value,
+                        HomeTeamId = (int)cboHomeTeam.SelectedValue,
+                        GuestTeamId = (int)cboGuestTeam.SelectedValue,
+                        Score1 = null,
+                        Score2 = null
+                    };
+                db.Matches.Add(newMatch);
             }
             else if (btnAddNewMatch.Text == "Edit Selected Match")
             {
@@ -70,6 +87,11 @@ namespace WeAreTheChampions
                 selectedMatch.Score2 = (int)nudScore2.Value;
             }
             db.SaveChanges();
+        }
+
+        private void cbAddScore_CheckedChanged(object sender, EventArgs e)
+        {
+            lblScore1.Visible = lblScore2.Visible = lblResult.Visible = nudScore1.Visible = nudScore2.Visible = txtResult.Visible = cbAddScore.Checked;
         }
     }
 }

@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblScore1 = new System.Windows.Forms.Label();
+            this.lblScore2 = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
             this.dtpMatchTime = new System.Windows.Forms.DateTimePicker();
             this.cboHomeTeam = new System.Windows.Forms.ComboBox();
             this.cboGuestTeam = new System.Windows.Forms.ComboBox();
@@ -41,6 +41,7 @@
             this.nudScore2 = new System.Windows.Forms.NumericUpDown();
             this.txtResult = new System.Windows.Forms.TextBox();
             this.btnAddNewMatch = new System.Windows.Forms.Button();
+            this.cbAddScore = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudScore1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudScore2)).BeginInit();
             this.SuspendLayout();
@@ -66,38 +67,41 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 90);
+            this.label3.Location = new System.Drawing.Point(13, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Guest Team";
             // 
-            // label4
+            // lblScore1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Score1";
+            this.lblScore1.AutoSize = true;
+            this.lblScore1.Location = new System.Drawing.Point(13, 112);
+            this.lblScore1.Name = "lblScore1";
+            this.lblScore1.Size = new System.Drawing.Size(41, 13);
+            this.lblScore1.TabIndex = 0;
+            this.lblScore1.Text = "Score1";
+            this.lblScore1.Visible = false;
             // 
-            // label5
+            // lblScore2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 117);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Score2";
+            this.lblScore2.AutoSize = true;
+            this.lblScore2.Location = new System.Drawing.Point(13, 137);
+            this.lblScore2.Name = "lblScore2";
+            this.lblScore2.Size = new System.Drawing.Size(41, 13);
+            this.lblScore2.TabIndex = 0;
+            this.lblScore2.Text = "Score2";
+            this.lblScore2.Visible = false;
             // 
-            // label6
+            // lblResult
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 144);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Result";
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(13, 163);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(37, 13);
+            this.lblResult.TabIndex = 0;
+            this.lblResult.Text = "Result";
+            this.lblResult.Visible = false;
             // 
             // dtpMatchTime
             // 
@@ -124,7 +128,7 @@
             this.cboGuestTeam.DisplayMember = "Name";
             this.cboGuestTeam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGuestTeam.FormattingEnabled = true;
-            this.cboGuestTeam.Location = new System.Drawing.Point(80, 85);
+            this.cboGuestTeam.Location = new System.Drawing.Point(80, 57);
             this.cboGuestTeam.Name = "cboGuestTeam";
             this.cboGuestTeam.Size = new System.Drawing.Size(142, 21);
             this.cboGuestTeam.TabIndex = 3;
@@ -132,29 +136,32 @@
             // 
             // nudScore1
             // 
-            this.nudScore1.Location = new System.Drawing.Point(80, 58);
+            this.nudScore1.Location = new System.Drawing.Point(80, 107);
             this.nudScore1.Name = "nudScore1";
             this.nudScore1.Size = new System.Drawing.Size(142, 20);
             this.nudScore1.TabIndex = 4;
+            this.nudScore1.Visible = false;
             // 
             // nudScore2
             // 
-            this.nudScore2.Location = new System.Drawing.Point(80, 113);
+            this.nudScore2.Location = new System.Drawing.Point(80, 133);
             this.nudScore2.Name = "nudScore2";
             this.nudScore2.Size = new System.Drawing.Size(142, 20);
             this.nudScore2.TabIndex = 4;
+            this.nudScore2.Visible = false;
             // 
             // txtResult
             // 
-            this.txtResult.Location = new System.Drawing.Point(80, 140);
+            this.txtResult.Location = new System.Drawing.Point(80, 159);
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
             this.txtResult.Size = new System.Drawing.Size(142, 20);
             this.txtResult.TabIndex = 5;
+            this.txtResult.Visible = false;
             // 
             // btnAddNewMatch
             // 
-            this.btnAddNewMatch.Location = new System.Drawing.Point(80, 167);
+            this.btnAddNewMatch.Location = new System.Drawing.Point(80, 186);
             this.btnAddNewMatch.Name = "btnAddNewMatch";
             this.btnAddNewMatch.Size = new System.Drawing.Size(142, 23);
             this.btnAddNewMatch.TabIndex = 6;
@@ -162,11 +169,23 @@
             this.btnAddNewMatch.UseVisualStyleBackColor = true;
             this.btnAddNewMatch.Click += new System.EventHandler(this.btnAddNewMatch_Click);
             // 
+            // cbAddScore
+            // 
+            this.cbAddScore.AutoSize = true;
+            this.cbAddScore.Location = new System.Drawing.Point(80, 84);
+            this.cbAddScore.Name = "cbAddScore";
+            this.cbAddScore.Size = new System.Drawing.Size(76, 17);
+            this.cbAddScore.TabIndex = 7;
+            this.cbAddScore.Text = "Add Score";
+            this.cbAddScore.UseVisualStyleBackColor = true;
+            this.cbAddScore.CheckedChanged += new System.EventHandler(this.cbAddScore_CheckedChanged);
+            // 
             // MatchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(241, 198);
+            this.ClientSize = new System.Drawing.Size(241, 220);
+            this.Controls.Add(this.cbAddScore);
             this.Controls.Add(this.btnAddNewMatch);
             this.Controls.Add(this.txtResult);
             this.Controls.Add(this.nudScore2);
@@ -174,9 +193,9 @@
             this.Controls.Add(this.cboGuestTeam);
             this.Controls.Add(this.cboHomeTeam);
             this.Controls.Add(this.dtpMatchTime);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblResult);
+            this.Controls.Add(this.lblScore2);
+            this.Controls.Add(this.lblScore1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -195,9 +214,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblScore1;
+        private System.Windows.Forms.Label lblScore2;
+        private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.DateTimePicker dtpMatchTime;
         private System.Windows.Forms.ComboBox cboHomeTeam;
         private System.Windows.Forms.ComboBox cboGuestTeam;
@@ -205,5 +224,6 @@
         private System.Windows.Forms.NumericUpDown nudScore2;
         private System.Windows.Forms.TextBox txtResult;
         private System.Windows.Forms.Button btnAddNewMatch;
+        private System.Windows.Forms.CheckBox cbAddScore;
     }
 }

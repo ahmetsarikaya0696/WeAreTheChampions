@@ -24,8 +24,10 @@ namespace WeAreTheChampions
         private void ListPlayerFormItems()
         {
             lstPlayers.DataSource = cboTeams.DataSource = null;
-            cboTeams.DataSource = db.Teams.ToList();
             lstPlayers.DataSource = db.Players.ToList();
+            var Teams = db.Teams.OrderBy(t => t.Name).ToList();
+            Teams.Insert(0, new Team() { Name = "None", TeamId = 0 });
+            cboTeams.DataSource = Teams;
         }
 
         private void btnAddNewPlayer_Click(object sender, EventArgs e)
@@ -41,7 +43,7 @@ namespace WeAreTheChampions
                 db.Players.Add(new Player()
                 {
                     Name = txtPlayerName.Text,
-                    Team = (Team)cboTeams.SelectedItem
+                    Team = ((Team)cboTeams.SelectedItem).Name == "None" ? null : (Team)cboTeams.SelectedItem
                 }
                    );
             }
@@ -49,7 +51,7 @@ namespace WeAreTheChampions
             {
                 var selectedPlayer = lstPlayers.SelectedItem as Player;
                 selectedPlayer.Name = txtPlayerName.Text;
-                selectedPlayer.Team = (Team)cboTeams.SelectedItem;
+                selectedPlayer.Team = ((Team)cboTeams.SelectedItem).Name == "None" ? null : (Team)cboTeams.SelectedItem;
             }
             db.SaveChanges();
             ClearPlayerForm();
@@ -63,7 +65,7 @@ namespace WeAreTheChampions
             {
                 var selectedPlayer = lstPlayers.SelectedItem as Player;
                 txtPlayerName.Text = selectedPlayer.Name;
-                cboTeams.SelectedValue = selectedPlayer.TeamId;
+                cboTeams.SelectedValue = selectedPlayer.TeamId == null ? cboTeams.SelectedIndex = 0 : selectedPlayer.TeamId;
                 btnAddNewPlayer.Text = "Update Selected Player";
                 btnCancel.Visible = true;
             }
