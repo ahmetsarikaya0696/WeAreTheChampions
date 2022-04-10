@@ -20,20 +20,23 @@ namespace WeAreTheChampions
         public ResultEnum? Result
         {
             get { return result; }
-            set
+            private set
             {
-                //result = value;
-                if (Score1 == null || Score2 == null)
-                    result = null;
-                else if (Score1 > Score2)
-                    result = ResultEnum.team1wins;
-                else if (Score1 < Score2)
-                    result = ResultEnum.team2wins;
-                else
-                    result = ResultEnum.equality;
+                SetResult();
             }
         }
 
+        public void SetResult()
+        {
+            if (Score1 == null || Score2 == null)
+                result = null;
+            else if (Score1 > Score2)
+                result = ResultEnum.team1wins;
+            else if (Score1 < Score2)
+                result = ResultEnum.team2wins;
+            else
+                result = ResultEnum.equality;
+        }
 
         public virtual Team HomeTeam { get; set; }
         public virtual Team GuestTeam { get; set; }

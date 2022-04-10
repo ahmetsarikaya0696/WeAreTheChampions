@@ -53,6 +53,11 @@ namespace WeAreTheChampions
 
         private void btnEditSelectedMatch_Click(object sender, EventArgs e)
         {
+            EditSelectedMatch();
+        }
+
+        private void EditSelectedMatch()
+        {
             if (dgvMatches.SelectedRows.Count == 0) return;
 
             var selectedMatch = (Match)dgvMatches.SelectedRows[0].DataBoundItem;
@@ -90,6 +95,11 @@ namespace WeAreTheChampions
         {
             if (e.KeyCode == Keys.Delete)
                 DeleteSelectedMatch();
+        }
+
+        private void dgvMatches_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EditSelectedMatch();
         }
     }
 }

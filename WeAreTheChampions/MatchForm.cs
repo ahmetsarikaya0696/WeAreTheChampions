@@ -86,11 +86,12 @@ namespace WeAreTheChampions
                     selectedMatch.Score1 = (int)nudScore1.Value;
                     selectedMatch.Score2 = (int)nudScore2.Value;
                     // Result ın tekrar hesaplanması gerekiyor
+                    selectedMatch.SetResult();
                 }
                 else
                 {
                     selectedMatch.Score1 = selectedMatch.Score2 = null;
-                    selectedMatch.Result = null;
+                    selectedMatch.SetResult();
                 }
             }
             db.SaveChanges();
