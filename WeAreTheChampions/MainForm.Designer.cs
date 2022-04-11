@@ -47,41 +47,45 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.AutoSize = false;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createTeamToolStripMenuItem,
             this.colorsToolStripMenuItem,
             this.playersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(697, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(697, 41);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // createTeamToolStripMenuItem
             // 
+            this.createTeamToolStripMenuItem.Image = global::WeAreTheChampions.Properties.Resources.football_uniform;
             this.createTeamToolStripMenuItem.Name = "createTeamToolStripMenuItem";
-            this.createTeamToolStripMenuItem.Size = new System.Drawing.Size(57, 21);
+            this.createTeamToolStripMenuItem.Size = new System.Drawing.Size(73, 37);
             this.createTeamToolStripMenuItem.Text = "Teams";
             this.createTeamToolStripMenuItem.Click += new System.EventHandler(this.createTeamToolStripMenuItem_Click);
             // 
             // colorsToolStripMenuItem
             // 
+            this.colorsToolStripMenuItem.Image = global::WeAreTheChampions.Properties.Resources.rgb;
             this.colorsToolStripMenuItem.Name = "colorsToolStripMenuItem";
-            this.colorsToolStripMenuItem.Size = new System.Drawing.Size(58, 21);
+            this.colorsToolStripMenuItem.Size = new System.Drawing.Size(74, 37);
             this.colorsToolStripMenuItem.Text = "Colors";
             this.colorsToolStripMenuItem.Click += new System.EventHandler(this.colorsToolStripMenuItem_Click);
             // 
             // playersToolStripMenuItem
             // 
+            this.playersToolStripMenuItem.Image = global::WeAreTheChampions.Properties.Resources.add_user;
             this.playersToolStripMenuItem.Name = "playersToolStripMenuItem";
-            this.playersToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
+            this.playersToolStripMenuItem.Size = new System.Drawing.Size(77, 37);
             this.playersToolStripMenuItem.Text = "Players";
             this.playersToolStripMenuItem.Click += new System.EventHandler(this.playersToolStripMenuItem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 33);
+            this.label1.Location = new System.Drawing.Point(12, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 1;
@@ -94,7 +98,7 @@
             this.dgvMatches.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMatches.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvMatches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMatches.Location = new System.Drawing.Point(15, 57);
+            this.dgvMatches.Location = new System.Drawing.Point(15, 65);
             this.dgvMatches.MultiSelect = false;
             this.dgvMatches.Name = "dgvMatches";
             this.dgvMatches.ReadOnly = true;
@@ -107,7 +111,7 @@
             // 
             // btnAddNewMatch
             // 
-            this.btnAddNewMatch.Location = new System.Drawing.Point(15, 213);
+            this.btnAddNewMatch.Location = new System.Drawing.Point(15, 221);
             this.btnAddNewMatch.Name = "btnAddNewMatch";
             this.btnAddNewMatch.Size = new System.Drawing.Size(130, 23);
             this.btnAddNewMatch.TabIndex = 3;
@@ -117,7 +121,7 @@
             // 
             // btnEditSelectedMatch
             // 
-            this.btnEditSelectedMatch.Location = new System.Drawing.Point(285, 213);
+            this.btnEditSelectedMatch.Location = new System.Drawing.Point(285, 221);
             this.btnEditSelectedMatch.Name = "btnEditSelectedMatch";
             this.btnEditSelectedMatch.Size = new System.Drawing.Size(130, 23);
             this.btnEditSelectedMatch.TabIndex = 3;
@@ -127,7 +131,7 @@
             // 
             // btnDeleteSelectedMatch
             // 
-            this.btnDeleteSelectedMatch.Location = new System.Drawing.Point(555, 213);
+            this.btnDeleteSelectedMatch.Location = new System.Drawing.Point(555, 221);
             this.btnDeleteSelectedMatch.Name = "btnDeleteSelectedMatch";
             this.btnDeleteSelectedMatch.Size = new System.Drawing.Size(130, 23);
             this.btnDeleteSelectedMatch.TabIndex = 3;
@@ -139,7 +143,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 251);
+            this.ClientSize = new System.Drawing.Size(697, 256);
             this.Controls.Add(this.btnDeleteSelectedMatch);
             this.Controls.Add(this.btnEditSelectedMatch);
             this.Controls.Add(this.btnAddNewMatch);

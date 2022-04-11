@@ -56,6 +56,9 @@ namespace WeAreTheChampions
                 selectedColor.Red = (int)nudRed.Value;
                 selectedColor.Green = (int)nudGreen.Value;
                 selectedColor.Blue = (int)nudBlue.Value;
+                btnAddNewColor.Text = "Add New Color";
+                btnCancel.Visible = false;
+                ClearForm();
             }
 
             db.SaveChanges();
@@ -73,7 +76,7 @@ namespace WeAreTheChampions
                 nudBlue.Value = selectedColor.Blue;
 
                 btnAddNewColor.Text = "Update Selected Color";
-                btnCancel.Visible = true; 
+                btnCancel.Visible = true;
             }
         }
 
