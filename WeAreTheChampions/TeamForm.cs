@@ -104,5 +104,14 @@ namespace WeAreTheChampions
                 }
             }
         }
+
+        private void lstTeams_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstTeams.SelectedIndex != -1)
+            {
+                var selectedTeam = lstTeams.SelectedItem as Team;
+                lstPlayers.DataSource = db.Players.Where(p => p.TeamId == selectedTeam.TeamId).ToList();
+            }
+        }
     }
 }

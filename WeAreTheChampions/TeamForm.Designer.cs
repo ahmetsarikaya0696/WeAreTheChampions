@@ -35,12 +35,15 @@
             this.btnAddNewTeam = new System.Windows.Forms.Button();
             this.lstTeams = new System.Windows.Forms.ListBox();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lstPlayers = new System.Windows.Forms.ListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(16, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 0;
@@ -48,7 +51,7 @@
             // 
             // txtTeamName
             // 
-            this.txtTeamName.Location = new System.Drawing.Point(81, 12);
+            this.txtTeamName.Location = new System.Drawing.Point(85, 28);
             this.txtTeamName.Name = "txtTeamName";
             this.txtTeamName.Size = new System.Drawing.Size(120, 20);
             this.txtTeamName.TabIndex = 1;
@@ -56,7 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 41);
+            this.label2.Location = new System.Drawing.Point(16, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 2;
@@ -66,14 +69,14 @@
             // 
             this.clbTeamColors.CheckOnClick = true;
             this.clbTeamColors.FormattingEnabled = true;
-            this.clbTeamColors.Location = new System.Drawing.Point(81, 41);
+            this.clbTeamColors.Location = new System.Drawing.Point(85, 57);
             this.clbTeamColors.Name = "clbTeamColors";
             this.clbTeamColors.Size = new System.Drawing.Size(120, 109);
             this.clbTeamColors.TabIndex = 3;
             // 
             // btnAddNewTeam
             // 
-            this.btnAddNewTeam.Location = new System.Drawing.Point(15, 160);
+            this.btnAddNewTeam.Location = new System.Drawing.Point(19, 176);
             this.btnAddNewTeam.Name = "btnAddNewTeam";
             this.btnAddNewTeam.Size = new System.Drawing.Size(79, 36);
             this.btnAddNewTeam.TabIndex = 4;
@@ -83,18 +86,19 @@
             // 
             // lstTeams
             // 
-            this.lstTeams.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lstTeams.Dock = System.Windows.Forms.DockStyle.Left;
             this.lstTeams.FormattingEnabled = true;
-            this.lstTeams.Location = new System.Drawing.Point(220, 0);
+            this.lstTeams.Location = new System.Drawing.Point(3, 16);
             this.lstTeams.Name = "lstTeams";
-            this.lstTeams.Size = new System.Drawing.Size(155, 208);
+            this.lstTeams.Size = new System.Drawing.Size(155, 181);
             this.lstTeams.TabIndex = 5;
+            this.lstTeams.SelectedIndexChanged += new System.EventHandler(this.lstTeams_SelectedIndexChanged);
             this.lstTeams.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstTeams_KeyDown);
             this.lstTeams.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstTeams_MouseDoubleClick);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(122, 160);
+            this.btnCancel.Location = new System.Drawing.Point(126, 176);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(79, 36);
             this.btnCancel.TabIndex = 6;
@@ -103,13 +107,32 @@
             this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lstPlayers
+            // 
+            this.lstPlayers.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lstPlayers.FormattingEnabled = true;
+            this.lstPlayers.Location = new System.Drawing.Point(170, 16);
+            this.lstPlayers.Name = "lstPlayers";
+            this.lstPlayers.Size = new System.Drawing.Size(155, 181);
+            this.lstPlayers.TabIndex = 7;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lstPlayers);
+            this.groupBox1.Controls.Add(this.lstTeams);
+            this.groupBox1.Location = new System.Drawing.Point(221, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(328, 200);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            // 
             // TeamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 208);
+            this.ClientSize = new System.Drawing.Size(559, 218);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.lstTeams);
             this.Controls.Add(this.btnAddNewTeam);
             this.Controls.Add(this.clbTeamColors);
             this.Controls.Add(this.label2);
@@ -118,6 +141,7 @@
             this.Name = "TeamForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TeamForm";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +156,7 @@
         private System.Windows.Forms.Button btnAddNewTeam;
         private System.Windows.Forms.ListBox lstTeams;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ListBox lstPlayers;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
