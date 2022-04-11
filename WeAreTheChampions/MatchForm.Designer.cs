@@ -105,9 +105,11 @@
             // 
             // dtpMatchTime
             // 
-            this.dtpMatchTime.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.dtpMatchTime.CustomFormat = "MM/dd/yyyy HH:mm";
             this.dtpMatchTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpMatchTime.Location = new System.Drawing.Point(80, 3);
+            this.dtpMatchTime.MaxDate = new System.DateTime(9998, 12, 30, 23, 59, 0, 0);
+            this.dtpMatchTime.MinDate = new System.DateTime(1753, 1, 1, 23, 59, 0, 0);
             this.dtpMatchTime.Name = "dtpMatchTime";
             this.dtpMatchTime.Size = new System.Drawing.Size(142, 20);
             this.dtpMatchTime.TabIndex = 2;

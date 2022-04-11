@@ -74,6 +74,7 @@ namespace WeAreTheChampions
                         Score1 = null,
                         Score2 = null
                     };
+                newMatch.SetResult();
                 db.Matches.Add(newMatch);
             }
             else if (btnAddNewMatch.Text == "Edit Selected Match")
@@ -93,6 +94,7 @@ namespace WeAreTheChampions
                     selectedMatch.Score1 = selectedMatch.Score2 = null;
                     selectedMatch.SetResult();
                 }
+                selectedMatch.SetResult();
             }
             db.SaveChanges();
             if (dbUpdated != null)

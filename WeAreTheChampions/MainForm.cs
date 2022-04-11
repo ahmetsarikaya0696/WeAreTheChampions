@@ -23,7 +23,7 @@ namespace WeAreTheChampions
         private void ListMatches()
         {
             dgvMatches.DataSource = null;
-            dgvMatches.DataSource = db.Matches.ToList();
+            dgvMatches.DataSource = db.Matches.OrderByDescending(m => m.MatchTime).ToList();
         }
 
         private void createTeamToolStripMenuItem_Click(object sender, EventArgs e)
