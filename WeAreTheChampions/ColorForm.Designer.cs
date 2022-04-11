@@ -130,7 +130,7 @@
             // 
             // btnAddNewColor
             // 
-            this.btnAddNewColor.Location = new System.Drawing.Point(20, 85);
+            this.btnAddNewColor.Location = new System.Drawing.Point(20, 127);
             this.btnAddNewColor.Name = "btnAddNewColor";
             this.btnAddNewColor.Size = new System.Drawing.Size(113, 34);
             this.btnAddNewColor.TabIndex = 4;
@@ -144,14 +144,14 @@
             this.lstColors.FormattingEnabled = true;
             this.lstColors.Location = new System.Drawing.Point(326, 0);
             this.lstColors.Name = "lstColors";
-            this.lstColors.Size = new System.Drawing.Size(147, 146);
+            this.lstColors.Size = new System.Drawing.Size(147, 169);
             this.lstColors.TabIndex = 5;
             this.lstColors.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstColors_KeyDown);
             this.lstColors.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstColors_MouseDoubleClick);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(149, 85);
+            this.btnCancel.Location = new System.Drawing.Point(149, 127);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(113, 34);
             this.btnCancel.TabIndex = 6;
@@ -174,7 +174,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 146);
+            this.BackgroundImage = global::WeAreTheChampions.Properties.Resources.rgbback;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(473, 169);
             this.Controls.Add(this.pbColor);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lstColors);
@@ -187,7 +189,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtColorName);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(489, 208);
+            this.MinimumSize = new System.Drawing.Size(489, 208);
             this.Name = "ColorForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ColorsForm";
             ((System.ComponentModel.ISupportInitialize)(this.nudRed)).EndInit();

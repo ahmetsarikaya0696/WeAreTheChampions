@@ -59,7 +59,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 57);
+            this.label2.Location = new System.Drawing.Point(16, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 2;
@@ -69,14 +69,14 @@
             // 
             this.clbTeamColors.CheckOnClick = true;
             this.clbTeamColors.FormattingEnabled = true;
-            this.clbTeamColors.Location = new System.Drawing.Point(85, 57);
+            this.clbTeamColors.Location = new System.Drawing.Point(85, 96);
             this.clbTeamColors.Name = "clbTeamColors";
-            this.clbTeamColors.Size = new System.Drawing.Size(120, 109);
+            this.clbTeamColors.Size = new System.Drawing.Size(120, 139);
             this.clbTeamColors.TabIndex = 3;
             // 
             // btnAddNewTeam
             // 
-            this.btnAddNewTeam.Location = new System.Drawing.Point(19, 176);
+            this.btnAddNewTeam.Location = new System.Drawing.Point(19, 270);
             this.btnAddNewTeam.Name = "btnAddNewTeam";
             this.btnAddNewTeam.Size = new System.Drawing.Size(79, 36);
             this.btnAddNewTeam.TabIndex = 4;
@@ -90,7 +90,7 @@
             this.lstTeams.FormattingEnabled = true;
             this.lstTeams.Location = new System.Drawing.Point(3, 16);
             this.lstTeams.Name = "lstTeams";
-            this.lstTeams.Size = new System.Drawing.Size(155, 181);
+            this.lstTeams.Size = new System.Drawing.Size(155, 305);
             this.lstTeams.TabIndex = 5;
             this.lstTeams.SelectedIndexChanged += new System.EventHandler(this.lstTeams_SelectedIndexChanged);
             this.lstTeams.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstTeams_KeyDown);
@@ -98,7 +98,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(126, 176);
+            this.btnCancel.Location = new System.Drawing.Point(126, 270);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(79, 36);
             this.btnCancel.TabIndex = 6;
@@ -113,16 +113,17 @@
             this.lstPlayers.FormattingEnabled = true;
             this.lstPlayers.Location = new System.Drawing.Point(170, 16);
             this.lstPlayers.Name = "lstPlayers";
-            this.lstPlayers.Size = new System.Drawing.Size(155, 181);
+            this.lstPlayers.Size = new System.Drawing.Size(155, 305);
             this.lstPlayers.TabIndex = 7;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lstPlayers);
             this.groupBox1.Controls.Add(this.lstTeams);
-            this.groupBox1.Location = new System.Drawing.Point(221, 12);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox1.Location = new System.Drawing.Point(426, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(328, 200);
+            this.groupBox1.Size = new System.Drawing.Size(328, 324);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
@@ -130,7 +131,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 218);
+            this.BackgroundImage = global::WeAreTheChampions.Properties.Resources.team;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(754, 324);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddNewTeam);
@@ -138,7 +141,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTeamName);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(770, 363);
+            this.MinimumSize = new System.Drawing.Size(770, 363);
             this.Name = "TeamForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TeamForm";
             this.groupBox1.ResumeLayout(false);

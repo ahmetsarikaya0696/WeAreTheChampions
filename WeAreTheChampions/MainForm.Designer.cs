@@ -54,7 +54,7 @@
             this.playersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(697, 41);
+            this.menuStrip1.Size = new System.Drawing.Size(832, 41);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -85,7 +85,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 41);
+            this.label1.Location = new System.Drawing.Point(87, 131);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 1;
@@ -97,8 +97,9 @@
             this.dgvMatches.AllowUserToDeleteRows = false;
             this.dgvMatches.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMatches.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMatches.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvMatches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMatches.Location = new System.Drawing.Point(15, 65);
+            this.dgvMatches.Location = new System.Drawing.Point(81, 147);
             this.dgvMatches.MultiSelect = false;
             this.dgvMatches.Name = "dgvMatches";
             this.dgvMatches.ReadOnly = true;
@@ -111,7 +112,7 @@
             // 
             // btnAddNewMatch
             // 
-            this.btnAddNewMatch.Location = new System.Drawing.Point(15, 221);
+            this.btnAddNewMatch.Location = new System.Drawing.Point(81, 301);
             this.btnAddNewMatch.Name = "btnAddNewMatch";
             this.btnAddNewMatch.Size = new System.Drawing.Size(130, 23);
             this.btnAddNewMatch.TabIndex = 3;
@@ -121,7 +122,7 @@
             // 
             // btnEditSelectedMatch
             // 
-            this.btnEditSelectedMatch.Location = new System.Drawing.Point(285, 221);
+            this.btnEditSelectedMatch.Location = new System.Drawing.Point(369, 301);
             this.btnEditSelectedMatch.Name = "btnEditSelectedMatch";
             this.btnEditSelectedMatch.Size = new System.Drawing.Size(130, 23);
             this.btnEditSelectedMatch.TabIndex = 3;
@@ -131,7 +132,7 @@
             // 
             // btnDeleteSelectedMatch
             // 
-            this.btnDeleteSelectedMatch.Location = new System.Drawing.Point(555, 221);
+            this.btnDeleteSelectedMatch.Location = new System.Drawing.Point(621, 301);
             this.btnDeleteSelectedMatch.Name = "btnDeleteSelectedMatch";
             this.btnDeleteSelectedMatch.Size = new System.Drawing.Size(130, 23);
             this.btnDeleteSelectedMatch.TabIndex = 3;
@@ -143,7 +144,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 256);
+            this.BackgroundImage = global::WeAreTheChampions.Properties.Resources.area;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(832, 444);
             this.Controls.Add(this.btnDeleteSelectedMatch);
             this.Controls.Add(this.btnEditSelectedMatch);
             this.Controls.Add(this.btnAddNewMatch);
@@ -151,7 +154,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(848, 483);
+            this.MinimumSize = new System.Drawing.Size(848, 483);
             this.Name = "MainForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "We are the Champions 1.0";
             this.menuStrip1.ResumeLayout(false);

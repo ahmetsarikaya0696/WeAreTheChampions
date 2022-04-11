@@ -202,6 +202,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "MatchForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MatchForm";
             ((System.ComponentModel.ISupportInitialize)(this.nudScore1)).EndInit();

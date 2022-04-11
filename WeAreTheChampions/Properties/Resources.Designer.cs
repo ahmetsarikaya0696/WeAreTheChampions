@@ -73,6 +73,16 @@ namespace WeAreTheChampions.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap area {
+            get {
+                object obj = ResourceManager.GetObject("area", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap football_uniform {
             get {
                 object obj = ResourceManager.GetObject("football_uniform", resourceCulture);
@@ -83,9 +93,39 @@ namespace WeAreTheChampions.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap players {
+            get {
+                object obj = ResourceManager.GetObject("players", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rgb {
             get {
                 object obj = ResourceManager.GetObject("rgb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rgbback {
+            get {
+                object obj = ResourceManager.GetObject("rgbback", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap team {
+            get {
+                object obj = ResourceManager.GetObject("team", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

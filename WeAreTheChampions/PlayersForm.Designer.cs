@@ -87,9 +87,9 @@
             // 
             this.lstPlayers.Dock = System.Windows.Forms.DockStyle.Right;
             this.lstPlayers.FormattingEnabled = true;
-            this.lstPlayers.Location = new System.Drawing.Point(219, 0);
+            this.lstPlayers.Location = new System.Drawing.Point(271, 0);
             this.lstPlayers.Name = "lstPlayers";
-            this.lstPlayers.Size = new System.Drawing.Size(156, 204);
+            this.lstPlayers.Size = new System.Drawing.Size(156, 197);
             this.lstPlayers.TabIndex = 4;
             this.lstPlayers.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstPlayers_KeyDown);
             this.lstPlayers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstPlayers_MouseDoubleClick);
@@ -109,7 +109,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 204);
+            this.BackgroundImage = global::WeAreTheChampions.Properties.Resources.players;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(427, 197);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lstPlayers);
             this.Controls.Add(this.btnAddNewPlayer);
@@ -117,7 +119,11 @@
             this.Controls.Add(this.txtPlayerName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(443, 236);
+            this.MinimumSize = new System.Drawing.Size(443, 236);
             this.Name = "PlayersForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PlayersForm";
             this.ResumeLayout(false);
