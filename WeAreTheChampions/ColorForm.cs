@@ -13,12 +13,14 @@ namespace WeAreTheChampions
     public partial class ColorForm : Form
     {
         private readonly AppDbContext db;
-
+        ColorDialog colorDialog;
         public ColorForm(AppDbContext db)
         {
             InitializeComponent();
+            colorDialog = new ColorDialog();
             this.db = db;
             ListColors();
+            SetBackgroundColor();
         }
 
         private void ListColors()
@@ -103,6 +105,42 @@ namespace WeAreTheChampions
                     ListColors();
                 }
             }
+        }
+
+        private void pbColor_Click(object sender, EventArgs e)
+        {
+            var dr = colorDialog.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                pbColor.BackColor = colorDialog.Color;
+                nudRed.Value = colorDialog.Color.R;
+                nudGreen.Value = colorDialog.Color.G;
+                nudBlue.Value = colorDialog.Color.B;
+            }
+        }
+        private void SetBackgroundColor()
+        {
+            var r = (int)nudRed.Value;
+            var g = (int)nudGreen.Value;
+            var b = (int)nudBlue.Value;
+            var backgroundColor = System.Drawing.Color.FromArgb(r, g, b);
+            pbColor.BackColor = backgroundColor;
+        }
+
+        private void nudRed_ValueChanged(object sender, EventArgs e)
+        {
+            SetBackgroundColor();
+        }
+
+
+        private void nudGreen_ValueChanged(object sender, EventArgs e)
+        {
+            SetBackgroundColor();
+        }
+
+        private void nudBlue_ValueChanged(object sender, EventArgs e)
+        {
+            SetBackgroundColor();
         }
     }
 }

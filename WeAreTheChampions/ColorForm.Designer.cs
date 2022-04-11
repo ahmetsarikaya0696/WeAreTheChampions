@@ -39,9 +39,11 @@
             this.btnAddNewColor = new System.Windows.Forms.Button();
             this.lstColors = new System.Windows.Forms.ListBox();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.pbColor = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBlue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,77 +59,80 @@
             // 
             this.txtColorName.Location = new System.Drawing.Point(85, 12);
             this.txtColorName.Name = "txtColorName";
-            this.txtColorName.Size = new System.Drawing.Size(120, 20);
+            this.txtColorName.Size = new System.Drawing.Size(177, 20);
             this.txtColorName.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 51);
+            this.label2.Location = new System.Drawing.Point(17, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.Size = new System.Drawing.Size(15, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Red";
+            this.label2.Text = "R";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 88);
+            this.label3.Location = new System.Drawing.Point(101, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.Size = new System.Drawing.Size(15, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Green";
+            this.label3.Text = "G";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 125);
+            this.label4.Location = new System.Drawing.Point(185, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(28, 13);
+            this.label4.Size = new System.Drawing.Size(14, 13);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Blue";
+            this.label4.Text = "B";
             // 
             // nudRed
             // 
-            this.nudRed.Location = new System.Drawing.Point(85, 49);
+            this.nudRed.Location = new System.Drawing.Point(38, 38);
             this.nudRed.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.nudRed.Name = "nudRed";
-            this.nudRed.Size = new System.Drawing.Size(120, 20);
+            this.nudRed.Size = new System.Drawing.Size(57, 20);
             this.nudRed.TabIndex = 3;
+            this.nudRed.ValueChanged += new System.EventHandler(this.nudRed_ValueChanged);
             // 
             // nudGreen
             // 
-            this.nudGreen.Location = new System.Drawing.Point(85, 86);
+            this.nudGreen.Location = new System.Drawing.Point(122, 38);
             this.nudGreen.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.nudGreen.Name = "nudGreen";
-            this.nudGreen.Size = new System.Drawing.Size(120, 20);
+            this.nudGreen.Size = new System.Drawing.Size(57, 20);
             this.nudGreen.TabIndex = 3;
+            this.nudGreen.ValueChanged += new System.EventHandler(this.nudGreen_ValueChanged);
             // 
             // nudBlue
             // 
-            this.nudBlue.Location = new System.Drawing.Point(85, 123);
+            this.nudBlue.Location = new System.Drawing.Point(205, 38);
             this.nudBlue.Maximum = new decimal(new int[] {
             255,
             0,
             0,
             0});
             this.nudBlue.Name = "nudBlue";
-            this.nudBlue.Size = new System.Drawing.Size(120, 20);
+            this.nudBlue.Size = new System.Drawing.Size(57, 20);
             this.nudBlue.TabIndex = 3;
+            this.nudBlue.ValueChanged += new System.EventHandler(this.nudBlue_ValueChanged);
             // 
             // btnAddNewColor
             // 
-            this.btnAddNewColor.Location = new System.Drawing.Point(20, 166);
+            this.btnAddNewColor.Location = new System.Drawing.Point(20, 85);
             this.btnAddNewColor.Name = "btnAddNewColor";
-            this.btnAddNewColor.Size = new System.Drawing.Size(79, 34);
+            this.btnAddNewColor.Size = new System.Drawing.Size(113, 34);
             this.btnAddNewColor.TabIndex = 4;
             this.btnAddNewColor.Text = "Add New Color";
             this.btnAddNewColor.UseVisualStyleBackColor = true;
@@ -137,29 +142,40 @@
             // 
             this.lstColors.Dock = System.Windows.Forms.DockStyle.Right;
             this.lstColors.FormattingEnabled = true;
-            this.lstColors.Location = new System.Drawing.Point(217, 0);
+            this.lstColors.Location = new System.Drawing.Point(326, 0);
             this.lstColors.Name = "lstColors";
-            this.lstColors.Size = new System.Drawing.Size(147, 212);
+            this.lstColors.Size = new System.Drawing.Size(147, 146);
             this.lstColors.TabIndex = 5;
             this.lstColors.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lstColors_KeyDown);
             this.lstColors.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstColors_MouseDoubleClick);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(126, 166);
+            this.btnCancel.Location = new System.Drawing.Point(149, 85);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(79, 34);
+            this.btnCancel.Size = new System.Drawing.Size(113, 34);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Visible = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // ColorsForm
+            // pbColor
+            // 
+            this.pbColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbColor.Location = new System.Drawing.Point(268, 12);
+            this.pbColor.Name = "pbColor";
+            this.pbColor.Size = new System.Drawing.Size(46, 46);
+            this.pbColor.TabIndex = 7;
+            this.pbColor.TabStop = false;
+            this.pbColor.Click += new System.EventHandler(this.pbColor_Click);
+            // 
+            // ColorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 212);
+            this.ClientSize = new System.Drawing.Size(473, 146);
+            this.Controls.Add(this.pbColor);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lstColors);
             this.Controls.Add(this.btnAddNewColor);
@@ -171,12 +187,13 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtColorName);
             this.Controls.Add(this.label1);
-            this.Name = "ColorsForm";
+            this.Name = "ColorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ColorsForm";
             ((System.ComponentModel.ISupportInitialize)(this.nudRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudBlue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbColor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +212,6 @@
         private System.Windows.Forms.Button btnAddNewColor;
         private System.Windows.Forms.ListBox lstColors;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.PictureBox pbColor;
     }
 }
